@@ -1,0 +1,13 @@
+body {
+    color: white;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    overflow-y: scroll; /* force scroll to appear */
+}
+
+/* helper class when showing content */
+.noscroll {
+    overflow: hidden;
+}

@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+html {
+    background-color: white;
+}
+body {
+    font: 400 13px/1.6 'Helvetica Neue', 'Helvetica', 'Arial';
+    color: #fff;
+    transition: all .4s .3s ease-in;
+}
