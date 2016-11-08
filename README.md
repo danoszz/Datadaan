@@ -24,12 +24,12 @@ In a different terminal window, start the watcher
 
 You are good to go!
 
-_Credits_
+_Used in this project_
 
-[d3]: https://github.com/d3/d3
+D3.js[d3]: https://github.com/d3/d3
 
-[git]: https://git-scm.com
+Node[node]: https://nodejs.org
 
-[node]: https://nodejs.org
+Gulp.js[gulp]: http://gulpjs.com/
 
-[gulp]: http://gulpjs.com/
+SASS[gulp]: http://gulpjs.com/
