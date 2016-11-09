@@ -1,10 +1,32 @@
 
 main {
     display: flex;
-    height: 100vh;
+    height: 90vh;
+    width: 85vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #0000ed;
+    background: $color--white;
     background-size: cover;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2);
+    transition: $transition-smooth;
+    .coming-soon {
+      color: $color--blue;
+      text-align: center;
+    }
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+    }
 }
+
+// .coming-soon {
+//       position: absolute;
+//       width: 100%;
+//       color: $color--white;
+//       top: 0;
+//       right: 0;
+//       transform: rotate(90deg);
+//       transform-origin: left top;
+//     }
