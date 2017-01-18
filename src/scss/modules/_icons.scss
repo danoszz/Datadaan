@@ -1,0 +1,117 @@
+
+.icon {
+  display: inline-block;
+  position: relative;
+  width: $icon--size;
+  cursor: pointer;
+  span {
+    background: $color--blue;
+    position: absolute;
+  }
+}
+
+
+// arrow icon
+.arrow {
+  height: $icon--size;
+  width: $icon--size;
+  margin-bottom: 10px;
+  transform: rotate(90deg);
+  div {
+    height: $icon--thick;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - (#{$icon--thick} / 2));
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $color--blue;
+      top: 0;
+      left: calc(#{$icon--thick} * 1.5);
+      right: calc(#{$icon--thick} * 1.5);
+      bottom: 0;
+      transition: transform 0.4s $ease 0.3s;
+      transform: translate3d(calc(#{$icon--thick} * 1.5),0,0);
+    }
+  }
+
+  span {
+    height: calc(#{$icon--size} / 2);
+    width: $icon--thick;
+    background: none;
+
+    &:before {
+      content: '';
+      background: $color--blue;
+      transition: 0.4s $ease 0.4s;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    &:nth-of-type(even)::before {
+      transform-origin: top;
+    }
+
+    &:nth-of-type(odd)::before {
+      transform-origin: bottom;
+    }
+
+    &:nth-of-type(1) {
+      bottom: 0;
+      transform: translate3d(calc(-#{$icon--size} / 8), calc(#{$icon--size} / 17), 0) rotate(-45deg);
+    }
+
+    &:nth-of-type(2) {
+      top: 0;
+      transform: translate3d(calc(-#{$icon--size} / 8), calc(-#{$icon--size} / 17), 0) rotate(45deg);
+    }
+
+    &:nth-of-type(3) {
+      bottom: 0;
+      transform: translate3d(calc(#{$icon--size} / 8), calc(#{$icon--size} / 17), 0)rotate(45deg);
+    }
+
+    &:nth-of-type(4) {
+      top: 0;
+      transform: translate3d(calc(#{$icon--size} / 8), calc(-#{$icon--size} / 17), 0) rotate(-45deg);
+    }
+
+    &.left:before {
+      transform: scale3d(1,0,1);
+      transition: 0.4s $ease;
+    }
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  // active
+  &.active {
+
+    div:before {
+      transform: translate3d(calc(#{-$icon--thick} * 1.5),0,0);
+    }
+
+    .right:before {
+      transform: scale3d(1,0,1);
+      transition: 0.4s $ease;
+    }
+
+    .left:before {
+      transform: scale3d(1,1,1);
+      transition: 0.4s $ease 0.4s;
+    }
+  }
+  // don't be down
+
+}

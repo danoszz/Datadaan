@@ -11,22 +11,25 @@
 // PARTIALS
 //----------------------------------*/
 
-@import 'partials/_header.scss';
+
 @import 'partials/_base.scss';
-@import 'partials/_nav.scss';
 @import 'partials/_sidebar.scss';
 @import 'partials/_main.scss';
-@import 'partials/_footer.scss';
+@import 'partials/_visual.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
 //----------------------------------*/
 
-@import 'modules/_buttons.scss';
+@import 'modules/_loader.scss';
+@import 'modules/_linegrid.scss';
+@import 'modules/_logo.scss';
+@import 'modules/_icons.scss';
 @import 'modules/_typography.scss';
 @import 'modules/_misc.scss';
 
 // Enhancement modules
+@import 'modules/_animations.scss';
 @import 'modules/_breakpoints.scss';
 @import 'modules/_print.scss';
 

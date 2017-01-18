@@ -1,3 +1,58 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100vh;
+  width: $width-sidebar;
+  position: fixed;
+  color: $color--blue;
+  padding: $padding-sidebar;
 
+  &.sidebar--left {
+    left: 0;
+    top: 0;
+    padding-right: 0;
+
+    header {
+      h1 {
+        margin-left: -1px;
+        line-height: 0.8;
+      }
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $icon--size / 2;
+      p {
+      margin: 0;
+        a {
+          //color: rgba($color--blue, 0.5);
+          display: inline;
+        }
+        &:hover {
+          color: $color--blue;
+          a {
+            font-weight: 400;
+          }
+        }
+      }
+
+    }
+  }
+
+  &.sidebar--right {
+    right: 0;
+    top: 0;
+    align-items: flex-end;
+    padding-left: 0;
+  }
 }

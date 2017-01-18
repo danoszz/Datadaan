@@ -1,12 +1,11 @@
 body {
     color: white;
-    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
     overflow-y: scroll; /* force scroll to appear */
     min-height: 100vh;
-    background-color: $color--blue;
+    background-color: $color--white;
     display: flex;
     flex-direction: column;
     justify-content: center;

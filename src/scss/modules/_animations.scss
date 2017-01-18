@@ -1,0 +1,78 @@
+// Animations for each module
+
+$ratio: 1.6;
+$delay--loading: 2400ms;
+$delay__1: 225ms;
+$delay__2: $delay__1 * $ratio;
+$delay__3: $delay__2 * $ratio;
+$delay__4: $delay__3 * $ratio;
+$delay__5: $delay__4 * $ratio;
+$delay__6: $delay__5 * $ratio;
+
+$delay--total: ($delay__1 + $delay__2 + $delay__3 + $delay__4 + $delay__5 + $delay__6) / 6;
+
+body.loaded {
+
+.sidebar {
+  &.sidebar--left {
+    header,
+    nav,
+    footer {
+      opacity: 0;
+      animation: $delay--total fadeInBottom forwards;
+      animation-timing-function: $transition-smooth;
+    }
+    header {
+      animation-delay: $delay__1;
+    }
+    nav {
+      animation-delay: $delay__2;
+    }
+
+    footer {
+      animation-delay: $delay__3;
+    }
+  }
+  &.sidebar--right {
+    .logo,
+    .arrow--scroll
+     {
+      opacity: 0;
+      animation: $delay--total fadeInBottom forwards;
+      animation-delay: $delay--loading;
+      animation-timing-function: $transition-smooth;
+    }
+    .logo {
+      animation-delay: $delay__4;
+    }
+    .arrow--scroll {
+      animation-delay: $delay__5;
+    }
+
+  }
+}
+}
+.block-revealer__element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	pointer-events: none;
+	opacity: 0;
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

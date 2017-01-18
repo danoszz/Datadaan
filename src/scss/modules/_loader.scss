@@ -1,0 +1,39 @@
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: $color--blue;
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 10;
+	pointer-events: none;
+  transform: translateY(-50%);
+  top: 50%;
+  width: $padding-sidebar / 2;
+  height: 1px;
+  // top: $padding-sidebar;
+  // left: $padding-sidebar;
+  background-color: $color--white;
+	animation: loaderAnimation 2350ms ease-in-out forwards;
+}
+
+@keyframes loaderAnimation {
+
+	33% {
+		width: $width--flex__col;
+	}
+  100% {
+		width: 0;
+	}
+}

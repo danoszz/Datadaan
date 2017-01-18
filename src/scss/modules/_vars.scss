@@ -1,4 +1,28 @@
-$color--blue: #0000ED;
 $color--white: #ffffff;
+$color--black: #000000;
+$color--black__light: rgba($color--black, 0.1) ;
+$color--blue: #0000ED;
+$color--gray__light: #DEDEDE;
 
-$transition-smooth: all 300ms cubic-bezier(.76, .44, .39, .78);
+$color--blue__dark: #302387;
+$color--pink: #F0A2C5;
+$color--red: #E10000;
+
+$font-mono: 'Source Code Pro', monospace;
+$font-sans: 'Cabin', sans-serif;
+$font-serif: 'Cardo', serif;
+
+$transition-smooth: cubic-bezier(.76, .44, .39, .78);
+
+$width-sidebar: 300px;
+$padding-sidebar: $width-sidebar / 4;
+
+$bp--desktop: 65em;
+
+$icon--size: 50px;
+$icon--thick: 1px;
+$ease: cubic-bezier(.5,0,0,1);
+$icon--size: 30px;
+
+
+$width--flex__col: calc((100vw - (#{$width-sidebar} / 2)) / 5 - 2px );

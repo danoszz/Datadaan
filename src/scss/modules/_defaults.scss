@@ -7,7 +7,8 @@ html {
     background-color: white;
 }
 body {
-    font: 400 13px/1.6 'Helvetica Neue', 'Helvetica', 'Arial';
+    font: 400 $font-sans 'Helvetica Neue', 'Helvetica', 'Arial';
+    line-height: 1.6;
     color: #fff;
     transition: all .4s .3s ease-in;
 }
