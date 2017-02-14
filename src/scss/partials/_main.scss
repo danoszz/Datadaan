@@ -14,7 +14,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
     &.section__intro {
       h2 {
         font-size: 2vw;

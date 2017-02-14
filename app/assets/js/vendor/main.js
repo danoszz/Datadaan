@@ -231,7 +231,7 @@
 
 (function() {
   // Fake loading.
-  setTimeout(init, 0);
+  setTimeout(init, 2400);
 
   function init() {
     document.body.classList.remove('loading');
@@ -250,8 +250,8 @@
         onCover: function(contentEl, revealerEl) {
           anime({
             targets: contentEl,
-            duration: 666,
-            delay: 333,
+            duration: 1200,
+            delay: 0,
             easing: 'easeInOutCubic',
             translateY: [50, 0],
             opacity: [0, 1]
